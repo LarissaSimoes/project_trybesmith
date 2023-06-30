@@ -6,4 +6,6 @@ const router = express.Router();
 
 router.post('/', productsController.create);
 
+router.get('/', productsController.findAll);
+
 export default router;

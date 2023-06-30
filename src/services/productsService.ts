@@ -11,4 +11,10 @@ async function create(product: Product): Promise<ServiceResponseSuccess<Product>
   return serviceResponse;
 }
 
-export default { create };
+async function findAll(): Promise<Product[]> {
+  const models = await ProductModel.findAll();
+  const products: Product[] = models.map((model) => model.toJSON() as Product);
+  return products;
+}
+
+export default { create, findAll };
