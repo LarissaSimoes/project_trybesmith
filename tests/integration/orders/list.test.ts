@@ -15,8 +15,8 @@ describe('GET /orders', function () {
   }
 
   it('Deve retornar os pedidos', async function () {
-    const mockAllOrders = OrderModel.build(validResponse);
-    sinon.stub(OrderModel, 'findAll').resolves([mockAllOrders]);
+    const ordersMock = OrderModel.build(validResponse);
+    sinon.stub(OrderModel, 'findAll').resolves([ordersMock]);
 
     const response = await chai.request(app).get('/orders');
 
