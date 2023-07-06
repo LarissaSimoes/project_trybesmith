@@ -1,21 +1,18 @@
-// Erro: { status : literal, message: string, statusCode: number }
-// Sucesso: { status: literal, message : object, statusCode: number }
-
-type ServiceResponseErrorType = 'UNAUTHORIZED' | 'NOT_FOUND' | 'INVALID_DATA';
-type ServiceResponseSuccessType = 'OK';
-
-// type SuccessStatusCode = 200;
-type ErrorStatusCode = 400 | 404 | 401 | 403 | 500;
+export type ServiceResponseErrorType = 'UNAUTHORIZED' | 'NOT_FOUND' | 'INVALID_DATA';
+// export type ServiceResponseSuccessType = 'OK';
 
 export type ServiceResponseError = {
   status: ServiceResponseErrorType,
-  message: string,
-  statusCode: ErrorStatusCode
+  data: {
+    message: string;
+  };
 };
 
 export type ServiceResponseSuccess<T> = {
-  status: ServiceResponseSuccessType,
+  status: 'OK',
   data: T,
-//   message: T,
-//   statusCode: SuccessStatusCode
 };
+
+export type ServiceResponse<T> =
+  | ServiceResponseSuccess<T>
+  | ServiceResponseError;

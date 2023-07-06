@@ -1,20 +1,23 @@
 import ProductModel from '../database/models/product.model';
 import { Product } from '../types/Product';
-import { ServiceResponseSuccess } from '../types/ServiceResponse';
+import { ServiceResponse } from '../types/ServiceResponse';
 
-async function create(product: Product): Promise<ServiceResponseSuccess<Product>> {
+async function create(product: Product): Promise<ServiceResponse<Product>> {
   const newProduct = await ProductModel.create(product);
-  const serviceResponse: ServiceResponseSuccess<Product> = {
+  const serviceResponse: ServiceResponse<Product> = {
     status: 'OK',
     data: newProduct.dataValues,
   };
   return serviceResponse;
 }
 
-async function findAll(): Promise<Product[]> {
+async function findAll(): Promise<ServiceResponse<Product[]>> {
   const models = await ProductModel.findAll();
-  const products: Product[] = models.map((model) => model.toJSON() as Product);
-  return products;
+  const serviceResponse: ServiceResponse<Product[]> = {
+    status: 'OK',
+    data: models.map((e) => e.dataValues),
+  };
+  return serviceResponse;
 }
 
 export default { create, findAll };

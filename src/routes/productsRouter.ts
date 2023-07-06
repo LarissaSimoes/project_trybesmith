@@ -2,10 +2,10 @@ import express from 'express';
 
 import productsController from '../controllers/productsController';
 
-const router = express.Router();
+const productsRouter = express.Router();
 
-router.post('/', productsController.create);
+productsRouter.post('/', productsController.create);
 
-router.get('/', productsController.findAll);
+productsRouter.get('/', productsController.findAll);
 
-export default router;
+export default productsRouter;

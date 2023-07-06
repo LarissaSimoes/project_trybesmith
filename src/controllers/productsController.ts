@@ -11,9 +11,14 @@ async function create(req: Request, res: Response): Promise<Response> {
   return res.status(201).json(newProduct.data);
 }
 
-async function findAll(req: Request, res: Response): Promise<Response> {
+async function findAll(_req: Request, res: Response): Promise<Response> {
   const result = await productsService.findAll();
-  return res.status(200).json(result);
+  if (result.status !== 'OK') {
+    return res
+      .status(mapStatusHTTP(result.status))
+      .json(result.data);
+  }
+  return res.status(200).json(result.data);
 }
 
 export default { create, findAll };
