@@ -9,8 +9,6 @@ Principais características:
 
 - Autenticação com JWT: Algumas rotas são protegidas utilizando JWT (JSON Web Token), assegurando que apenas usuários autenticados e autorizados possam realizar certas operações.
 
-- Testes Automatizados: A integridade e funcionalidade dos endpoints foram verificadas através de testes, assegurando que a aplicação responda de maneira confiável às solicitações.
-
 - Operações CRUD: A API suporta operações básicas de criação, leitura e atualização, permitindo uma gestão completa dos itens e pedidos da loja.
 
 ## Tecnologias, ferramentas e habilidades
