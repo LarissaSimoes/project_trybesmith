@@ -2,7 +2,7 @@
 
 Esta aplicação foi desenvolvida utilizando TypeScript e Sequelize, garantindo tipagem robusta e uma integração fluida com o banco de dados.
 
-Principais Características:
+Principais características:
 - Produtos Personalizados: Permita que os clientes encomendem itens, como espadas, especificamente desenhados e forjados para suas preferências individuais.
 
 - Arquitetura em Camadas: A aplicação foi projetada com uma separação clara entre lógica de negócios, acesso a dados e interface da API, promovendo uma melhor organização e manutenção do código.
