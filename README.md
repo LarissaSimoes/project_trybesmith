@@ -5,13 +5,13 @@ Esta aplicação foi desenvolvida utilizando TypeScript e Sequelize, garantindo 
 Principais Características:
 - Produtos Personalizados: Permita que os clientes encomendem itens, como espadas, especificamente desenhados e forjados para suas preferências individuais.
 
-Arquitetura em Camadas: A aplicação foi projetada com uma separação clara entre lógica de negócios, acesso a dados e interface da API, promovendo uma melhor organização e manutenção do código.
+- Arquitetura em Camadas: A aplicação foi projetada com uma separação clara entre lógica de negócios, acesso a dados e interface da API, promovendo uma melhor organização e manutenção do código.
 
-Autenticação com JWT: Algumas rotas são protegidas utilizando JWT (JSON Web Token), assegurando que apenas usuários autenticados e autorizados possam realizar certas operações.
+- Autenticação com JWT: Algumas rotas são protegidas utilizando JWT (JSON Web Token), assegurando que apenas usuários autenticados e autorizados possam realizar certas operações.
 
-Testes Automatizados: A integridade e funcionalidade dos endpoints foram verificadas através de testes, assegurando que a aplicação responda de maneira confiável às solicitações.
+- Testes Automatizados: A integridade e funcionalidade dos endpoints foram verificadas através de testes, assegurando que a aplicação responda de maneira confiável às solicitações.
 
-Operações CRUD: A API suporta operações básicas de criação, leitura e atualização, permitindo uma gestão completa dos itens e pedidos da loja.
+- Operações CRUD: A API suporta operações básicas de criação, leitura e atualização, permitindo uma gestão completa dos itens e pedidos da loja.
 
 ## Tecnologias, ferramentas e habilidades
 - TypeScript
